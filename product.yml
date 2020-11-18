@@ -1,9 +1,6 @@
 
 message: hello test message
 
-server:
-  port: 8001
-
 spring:
   boot:
     admin:
