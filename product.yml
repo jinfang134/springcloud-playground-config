@@ -1,5 +1,5 @@
 
-message: hello
+message: hello test message
 
 server:
   port: 8001
