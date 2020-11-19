@@ -24,22 +24,22 @@ spring:
       - id: service-hi
         uri: lb://user
         predicates:
-          - Path=/api/user
+          - Path=/api/user/**
 
       - id: product
         uri: lb://product
         predicates:
-          - Path=/api/product
+          - Path=/api/product/**
       
       - id: eureka
         uri: lb://eureka
         predicates:
-          - Path=/eureka
+          - Path=/eureka/**
         filters:
           - StripPrefix=1
       - id: admin-server
         uri: lb://admin-server
         predicates:
-          -Path=/admin
+          -Path=/admin/**
         filters:
           - StripPrefix=1
