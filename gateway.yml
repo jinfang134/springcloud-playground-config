@@ -30,3 +30,16 @@ spring:
         uri: lb://product
         predicates:
           - Path=/api/product
+      
+      - id: eureka
+        uri: lb://eureka
+        predicates:
+          - Path=/eureka
+        filters:
+          - StripPrefix=1
+      - id: admin-server
+        uri: lb://admin-server
+        predicates:
+          -Path=/admin
+        filters:
+          - StripPrefix=1
