@@ -1,6 +1,12 @@
 server:
   port: 8000
 
+
+spring:
+  boot:
+    admin:
+      context-path: admin
+
 eureka:
   client:
     serviceUrl:
