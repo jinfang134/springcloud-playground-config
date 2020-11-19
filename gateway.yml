@@ -22,11 +22,11 @@ spring:
           lowerCaseServiceId: true
       routes:
       - id: service-hi
-        uri: http://localhost:8002
+        uri: lb://user
         predicates:
           - Path=/api/user
-          
+
       - id: product
-        uri: http://localhost:8001
+        uri: lb://product
         predicates:
           - Path=/api/product
