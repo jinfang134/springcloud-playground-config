@@ -19,15 +19,15 @@ spring:
       discovery:
         locator:
           enabled: true
-          lowerCaseServiceId: true
+          lowerCaseServiceId: false
       routes:
       - id: service-hi
-        uri: lb://user
+        uri: lb://USER
         predicates:
           - Path=/api/user/**
 
       - id: product
-        uri: lb://product
+        uri: lb://PRODUCT
         predicates:
           - Path=/api/product/**
       
@@ -39,7 +39,7 @@ spring:
           - StripPrefix=1
 
       - id: admin-server
-        uri: lb://admin-server
+        uri: lb://ADMIN-SERVER
         predicates:
           - Path=/admin/**
         # filters:
