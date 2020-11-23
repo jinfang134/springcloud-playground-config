@@ -37,6 +37,7 @@ spring:
           - Path=/eureka/**
         filters:
           - StripPrefix=1
+          - name: AuthCheckFilter
 
       - id: admin-server
         uri: lb://ADMIN-SERVER
