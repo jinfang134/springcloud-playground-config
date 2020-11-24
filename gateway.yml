@@ -25,7 +25,7 @@ spring:
           lowerCaseServiceId: false
       routes:
       - id: service-hi
-        uri: lb://USER
+        uri: ${USER_ENDPOINT:http://localhost:8002}
         predicates:
           - Path=/api/user/**
         filters:
