@@ -25,11 +25,21 @@ spring:
         uri: lb://USER
         predicates:
           - Path=/api/user/**
+        filters:
+          - name: AuthCheckFilter
 
       - id: product
         uri: lb://PRODUCT
         predicates:
           - Path=/api/product/**
+        filters:
+          - name: AuthCheckFilter
+
+      
+      - id: auth
+        uri: lb://AUTH-SERVER
+        predicates:
+          - Path=/api/auth/**
       
       - id: eureka
         uri: http://localhost:8761/
