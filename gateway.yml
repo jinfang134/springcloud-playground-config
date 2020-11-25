@@ -23,38 +23,4 @@ spring:
         locator:
           enabled: true
           lowerCaseServiceId: false
-      routes:
-      - id: service-hi
-        uri: ${USER_ENDPOINT:http://localhost:8002}
-        predicates:
-          - Path=/api/user/**
-        filters:
-          - name: AuthCheckFilter
-
-      - id: product
-        uri: ${PRODUCT_ENDPOINT:http://localhost:8001}
-        predicates:
-          - Path=/api/product/**
-        filters:
-          - name: AuthCheckFilter
-
-      
-      - id: auth
-        uri: lb://AUTH-SERVER
-        predicates:
-          - Path=/api/auth/**
-      
-      - id: eureka
-        uri: http://localhost:8761/
-        predicates:
-          - Path=/eureka/**
-        filters:
-          - StripPrefix=1
-          - name: AuthCheckFilter
-
-      - id: admin-server
-        uri: lb://ADMIN-SERVER
-        predicates:
-          - Path=/admin/**
-        # filters:
-        #   - StripPrefix=1
+     
