@@ -1,0 +1,6 @@
+
+message: hello test message
+
+spring:
+  zipkin:
+    enabled: false
