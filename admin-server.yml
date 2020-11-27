@@ -7,14 +7,6 @@ spring:
     admin:
       context-path: admin
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
-  instance:
-    leaseRenewalIntervalInSeconds: 10
-    health-check-url-path: /actuator/health
-
 management:
   endpoints:
     web:

@@ -5,9 +5,33 @@ spring:
     admin:
       client:
         enabled: false
+  security:
+    jwt:
+      signingKey: 3fdrew24wwerwr234234
+      expire: 3600000
+
 
 feign:
   url:
     user: http://localhost:8002
     product: http://localhost:8001
     auth: http://localhost:9000
+
+eureka:
+  client:
+    enabled: false
+    register-with-eureka: false
+
+ribbon:
+  eureka:
+    enabled: false
+
+user:
+  ribbon:
+    listOfServers: http://localhost:8002
+product:
+  ribbon:
+    listOfServers: http://localhost:8001
+auth:
+  ribbon:
+    listOfServers: http://localhost:9000
