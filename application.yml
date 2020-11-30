@@ -1,6 +1,10 @@
 spring:
   profiles:
     active: dev
+  security:
+    jwt:
+      signingKey: 3fdrew24wwerwr234234
+      expire: 3600000
 
   zipkin:
     baseUrl: ${ZIPKIN_URL:http://localhost:9411}
@@ -32,7 +36,7 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10
     health-check-url-path: /actuator/health
-    
+
 management:
   endpoints:
     web:
