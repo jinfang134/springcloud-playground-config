@@ -5,6 +5,13 @@ spring:
     jwt:
       signingKey: 3fdrew24wwerwr234234
       expire: 3600000
+  boot:
+    admin:
+      client:
+        enabled: true
+  cloud:
+    discovery:
+      enabled: false
 
   zipkin:
     baseUrl: ${ZIPKIN_URL:http://localhost:9411}
@@ -33,6 +40,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
+    enabled: true
+    register-with-eureka: true
   instance:
     leaseRenewalIntervalInSeconds: 10
     health-check-url-path: /actuator/health
@@ -47,3 +56,13 @@ management:
       show-details: ALWAYS
 
 message: hello test application.yml
+
+user:
+  ribbon:
+    listOfServers: http://localhost:8002
+product:
+  ribbon:
+    listOfServers: http://localhost:8001
+auth:
+  ribbon:
+    listOfServers: http://localhost:9000
