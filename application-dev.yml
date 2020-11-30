@@ -9,7 +9,9 @@ spring:
     jwt:
       signingKey: 3fdrew24wwerwr234234
       expire: 3600000
-
+  cloud:
+    discovery:
+      enabled: false
 
 feign:
   url:
