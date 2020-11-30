@@ -1,5 +1,5 @@
 
-message: hello test message
+# message: hello test message
 
 spring:
   zipkin:
