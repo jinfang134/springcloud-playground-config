@@ -45,5 +45,5 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
-      
-message: hello test dev
+
+message: hello test application.yml

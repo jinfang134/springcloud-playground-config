@@ -1,5 +1,5 @@
 
-message: hello test dev
+message: hello test application-dev.yml
 
 spring:
   boot:
