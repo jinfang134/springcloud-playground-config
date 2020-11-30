@@ -2,8 +2,6 @@
 message: hello test dev
 
 spring:
-  profiles:
-    active: dev
   boot:
     admin:
       client:
