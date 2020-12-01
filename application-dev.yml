@@ -14,12 +14,6 @@ spring:
     discovery:
       enabled: true
 
-feign:
-  url:
-    user: http://localhost:8002
-    product: http://localhost:8001
-    auth: http://localhost:9000
-
 eureka:
   client:
     enabled: false
