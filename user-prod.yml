@@ -9,6 +9,9 @@ message: hello test message
 spring:
   zipkin:
     enabled: true
+  cloud:
+    discovery:
+      enabled: true
 
 eureka:
   client:

@@ -4,6 +4,9 @@
 spring:
   zipkin:
     enabled: false
+  cloud:
+    discovery:
+      enabled: false
 
 eureka:
   client:
