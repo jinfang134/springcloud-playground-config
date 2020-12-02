@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: dev
+    active: prod
   security:
     jwt:
       signingKey: 3fdrew24wwerwr234234
